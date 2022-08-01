@@ -1,0 +1,31 @@
+1.
+   要下載chromedriver到程式的資料夾中，並確認chromedriver的版本有無跟Google Chrome的版本相應
+2.
+   先下載Anacondac後 要下載函式庫 有 requests、regex、BeautifulSoup、dateparser、pandas
+   並安裝第三方庫selenium
+   cmd命令列下，輸入pip install selenium
+
+
+3.
+   用jupyter 找到此程式的資料夾位置並在此資料夾中直接打開facebook_crawle.ipynb的檔案
+
+
+4.
+   In[] 中 輸入:
+	import facebook_crawle
+	Email = '帳號'							      #臉書帳號  					
+	Password = '密碼'						      #臉書密碼
+	groupurl = '想爬取社團網址'
+	facebook_crawle.crawler_private_group(Email, Password, groupurl)      #此行隨者爬取目標做更改
+									      #	facebook_crawle.crawler_private_group(Email, Password, groupurl)  #私人社團(無分享數)
+									      # facebook_crawle.crawler_group(Email, Password, groupurl)  #公開社團(有分享數)
+									      # facebook_crawle.crawler_messages(Email, Password, groupurl)  #單篇文章留言
+	post_number = 直接填數字			#想要爬取的文章數
+	其中groupurl為爬蟲的網址需改變，例如:原網址為 https://www.facebook.com/
+		     	                       要變成 https://m.facebook.com/    (www的部分要變成m) 
+
+5.
+   輸入完按下Run鍵，讓程式跑一下需要一陣子，會自動開啟一個瀏覽器不用動它，如果跑成功會顯示Finish並且會有兩個.cvs檔出現在此程式的資料夾中一個是私人社團、一個是留言內容
+
+
+
